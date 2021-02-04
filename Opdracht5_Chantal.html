@@ -9,7 +9,14 @@
 			console.log(knop)
 			document.getElementById("boodschap").innerHTML += ("U heeft op knop " + knop + " gedrukt. \n")
 			if(letter_lijst.includes(knop)){
-				alert("U heeft al een keer op " + knop + " geklikt.");
+				var count_letter = 1
+				for (x=0; x < letter_lijst.length; x++){
+					if(letter_lijst[x] == knop){
+						count_letter += 1;
+						}
+					}
+				console.log(count_letter)
+				alert("U heeft al " + count_letter + " keer op " + knop + " geklikt.");
 				}
 			letter_lijst.push(knop)
 			console.log(letter_lijst)
