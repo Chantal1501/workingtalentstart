@@ -6,24 +6,29 @@
 		function letter(){
 		var counter = 0
 		var letter_x = false
-		var tekst=document.getElementById("invoer").value;
+		var tekst = document.getElementById("invoer").value;
+		var input_letter = document.getElementById("gekozen_letter").value.toUpperCase();
+		console.log(input_letter)
 		for(var x=0; x<tekst.length; x++){
-			var letter = tekst[x];
-			if (letter == "E" || letter == "e"){
+			var letter = tekst[x].toUpperCase();
+			console.log(letter)
+			if (letter == input_letter){
 				letter_x = true;
 				counter += 1
 				}
 			}
-		console.log(letter_x)
-		console.log(counter)
 		if (letter_x == true){
-			alert("De letter E zit in dit woord");
+			alert("De letter zit " + counter + " keer in dit woord");
 			}
 		}
     </script>
   </head> 
   <body>
+	<div>Kies een woord:__________Kies een letter </div>
+
+
     <input type=text id=invoer>
+	<input type=text id=gekozen_letter>
 	<input type=button id=knopje value="Klik hier!" onclick=letter()>
   </body>
 </html>
