@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <style>
+    </style>
+    <script>
+		function bericht(){
+		var tekst=document.getElementById("invoer").value;
+		if (tekst == "hallo"){
+			alert("Welkom.")
+			}
+		if (tekst == "doei"){
+			alert("Tot de volgende keer.")
+			}
+		}
+    </script>
+  </head> 
+  <body>
+    <input type=text id=invoer>
+	<input type=button id=knopje value="Klik hier!" onclick=bericht()>
+  </body>
+</html>
