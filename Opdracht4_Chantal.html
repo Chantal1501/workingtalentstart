@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <style>
+    </style>
+    <script>
+		function geklikt(knop){
+			console.log(knop)
+			document.getElementById("boodschap").innerHTML += ("U heeft op knop " + knop + " gedrukt. \n")
+		}
+    </script>
+  </head> 
+  <body>
+	<div id=boodschap>
+	<input type=button id=knopA value="A" onclick="geklikt('A')">
+	<input type=button id=knopB value="B" onclick="geklikt('B')">
+	<input type=button id=knopC value="C" onclick="geklikt('C')">
+	<input type=button id=knopD value="D" onclick="geklikt('D')">
+  </body>
+</html>
