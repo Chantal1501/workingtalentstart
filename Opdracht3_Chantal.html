@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <style>
+    </style>
+    <script>
+		function letter(){
+		var counter = 0
+		var letter_x = false
+		var tekst=document.getElementById("invoer").value;
+		for(var x=0; x<tekst.length; x++){
+			var letter = tekst[x];
+			if (letter == "E" || letter == "e"){
+				letter_x = true;
+				counter += 1
+				}
+			}
+		console.log(letter_x)
+		console.log(counter)
+		if (letter_x == true){
+			alert("De letter E zit in dit woord");
+			}
+		}
+    </script>
+  </head> 
+  <body>
+    <input type=text id=invoer>
+	<input type=button id=knopje value="Klik hier!" onclick=letter()>
+  </body>
+</html>
