@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <style>
+    </style>
+    <script>
+		function e_functie(){
+		var letter_e = false
+		var tekst=document.getElementById("invoer").value;
+		for(var x=0; x<tekst.length; x++){
+			var letter = tekst[x];
+			if (letter == "E" || letter == "e"){
+				letter_e = true;
+				}
+			}
+		console.log(letter_e)
+		if (letter_e == true){
+			alert("De letter E zit in dit woord");
+			}
+		}
+    </script>
+  </head> 
+  <body>
+    <input type=text id=invoer>
+	<input type=button id=knopje value="Klik hier!" onclick=e_functie()>
+  </body>
+</html>
