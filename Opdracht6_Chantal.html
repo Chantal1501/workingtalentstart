@@ -3,19 +3,26 @@
     <style>
     </style>
     <script>
-		//function bericht(){
-		//var tekst=document.getElementById("invoer").value;
-		//if (tekst == "hallo"){
-			//alert("Welkom.")
-			//}
-	//	if (tekst == "doei"){
-		//	alert("Tot de volgende keer.")
-			//}
-		//}
+		var seizoenen_lijst = ["lente.jpg", "zomer.jpg", "herfst.jpg", "winter.jpg"]
+		var counter = 1
+		var jaarcounter = 0
+		
+		function seizoenen(){
+			document.getElementById('seizoen').src=seizoenen_lijst[counter]
+			counter += 1
+			if (counter == 4){
+				counter = 0;
+				jaarcounter += 1;
+				}
+			if (jaarcounter == 3 && counter == 0){
+				document.getElementById("boodschap").innerHTML += ("Er zijn 3 jaren voorbij")
+				}
+			}
     </script>
   </head> 
   <body>
 	<img id="seizoen" src="lente.jpg" style="width:500px">
-	<button onclick="document.getElementById('seizoen').src='zomer.jpg'">Maak het zomer</button>
+	<button onclick="seizoenen()">Verander het seizoen</button>
+	<div id = boodschap>
   </body>
 </html>
