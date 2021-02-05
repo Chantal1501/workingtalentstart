@@ -10,68 +10,71 @@
 		}
 		
     </style>
-    <script>
-		function kleur_veranderen(){
-			id.getElementById().style.color = "red"
+    <script>	
+		function kleur_veranderen(identifier){
+			console.log("hoi")
+			console.log(identifier)
+			var blokje = document.getElementById(identifier);
+			blokje.style.backgroundColor = 'green';
 			}
     </script>
   </head> 
   <body>
 	<h1>Vier op een rij!</h1>
     <table width="300" height="200" cellspacing="4" cellpadding="25"> 
-		<tr onclick="kleur_veranderen()" id=rij1>
-			<td id=rij1_1> </td>
-			<td id=rij1_2> </td>
-			<td id=rij1_3> </td>
-			<td id=rij1_4> </td>
-			<td id=rij1_5> </td>
-			<td id=rij1_6> </td>
-			<td id=rij1_7> </td>
+		<tr id=rij1>
+			<td id=rij1_1 onclick="kleur_veranderen('rij1_1')"> </td>
+			<td id=rij1_2 onclick="kleur_veranderen('rij1_2')"> </td>
+			<td id=rij1_3 onclick="kleur_veranderen('rij1_3')"> </td>
+			<td id=rij1_4 onclick="kleur_veranderen('rij1_4')"> </td>
+			<td id=rij1_5 onclick="kleur_veranderen('rij1_5')"> </td>
+			<td id=rij1_6 onclick="kleur_veranderen('rij1_6')"> </td>
+			<td id=rij1_7 onclick="kleur_veranderen('rij1_7')"> </td>
 		</tr>
-		<tr onclick="kleur_veranderen()" id=rij2>
-			<td id=rij2_1> </td>
-			<td id=rij2_2> </td>
-			<td id=rij2_3> </td>
-			<td id=rij2_4> </td>
-			<td id=rij2_5> </td>
-			<td id=rij2_6> </td>
-			<td id=rij2_7> </td>
+		<tr id=rij2>
+			<td id=rij2_1 onclick="kleur_veranderen('rij2_1')"> </td>
+			<td id=rij2_2 onclick="kleur_veranderen('rij2_2')"> </td>
+			<td id=rij2_3 onclick="kleur_veranderen('rij2_3')"> </td>
+			<td id=rij2_4 onclick="kleur_veranderen('rij2_4')"> </td>
+			<td id=rij2_5 onclick="kleur_veranderen('rij2_5')"> </td>
+			<td id=rij2_6 onclick="kleur_veranderen('rij2_6')"> </td>
+			<td id=rij2_7 onclick="kleur_veranderen('rij2_7')"> </td>
 		</tr>
-		<tr onclick="kleur_veranderen()" id=rij3>
-			<td id=rij3_1> </td>
-			<td id=rij3_2> </td>
-			<td id=rij3_3> </td>
-			<td id=rij3_4> </td>
-			<td id=rij3_5> </td>
-			<td id=rij3_6> </td>
-			<td id=rij3_7> </td>
+		<tr id=rij3>
+			<td id=rij3_1 onclick="kleur_veranderen('rij3_1')"> </td>
+			<td id=rij3_2 onclick="kleur_veranderen('rij3_2')"> </td>
+			<td id=rij3_3 onclick="kleur_veranderen('rij3_3')"> </td>
+			<td id=rij3_4 onclick="kleur_veranderen('rij3_4')"> </td>
+			<td id=rij3_5 onclick="kleur_veranderen('rij3_5')"> </td>
+			<td id=rij3_6 onclick="kleur_veranderen('rij3_6')"> </td>
+			<td id=rij3_7 onclick="kleur_veranderen('rij3_7')"> </td>
 		</tr>
-		<tr onclick="kleur_veranderen()" id=rij4>
-			<td id=rij4_1> </td>
-			<td id=rij4_2> </td>
-			<td id=rij4_3> </td>
-			<td id=rij4_4> </td>
-			<td id=rij4_5> </td>
-			<td id=rij4_6> </td>
-			<td id=rij4_7> </td>
+		<tr id=rij4>
+			<td id=rij4_1 onclick="kleur_veranderen('rij4_1')">  </td>
+			<td id=rij4_2 onclick="kleur_veranderen('rij4_2')"> </td>
+			<td id=rij4_3 onclick="kleur_veranderen('rij4_3')"> </td>
+			<td id=rij4_4 onclick="kleur_veranderen('rij4_4')"> </td>
+			<td id=rij4_5 onclick="kleur_veranderen('rij4_5')"> </td>
+			<td id=rij4_6 onclick="kleur_veranderen('rij4_6')"> </td>
+			<td id=rij4_7 onclick="kleur_veranderen('rij4_7')"> </td>
 		</tr>
-		<tr onclick="kleur_veranderen()" id=rij5>
-			<td id=rij5_1> </td>
-			<td id=rij5_2> </td>
-			<td id=rij5_3> </td>
-			<td id=rij5_4> </td>
-			<td id=rij5_5> </td>
-			<td id=rij5_6> </td>
-			<td id=rij5_7> </td>
+		<tr id=rij5>
+			<td id=rij5_1 onclick="kleur_veranderen('rij5_1')"> </td>
+			<td id=rij5_2 onclick="kleur_veranderen('rij5_2')"> </td>
+			<td id=rij5_3 onclick="kleur_veranderen('rij5_3')"> </td>
+			<td id=rij5_4 onclick="kleur_veranderen('rij5_4')"> </td>
+			<td id=rij5_5 onclick="kleur_veranderen('rij5_5')"> </td>
+			<td id=rij5_6 onclick="kleur_veranderen('rij5_6')"> </td>
+			<td id=rij5_7 onclick="kleur_veranderen('rij5_7')"> </td>
 		</tr>
-		<tr onclick="kleur_veranderen()" id=rij6>
-			<td id=rij6_1> </td>
-			<td id=rij6_2> </td>
-			<td id=rij6_3> </td>
-			<td id=rij6_4> </td>
-			<td id=rij6_5> </td>
-			<td id=rij6_6> </td>
-			<td id=rij6_7> </td>
+		<tr id=rij6>
+			<td id=rij6_1 onclick="kleur_veranderen('rij6_1')"> </td>
+			<td id=rij6_2 onclick="kleur_veranderen('rij6_2')"> </td>
+			<td id=rij6_3 onclick="kleur_veranderen('rij6_3')"> </td>
+			<td id=rij6_4 onclick="kleur_veranderen('rij6_4')"> </td>
+			<td id=rij6_5 onclick="kleur_veranderen('rij6_5')"> </td>
+			<td id=rij6_6 onclick="kleur_veranderen('rij6_6')"> </td>
+			<td id=rij6_7 onclick="kleur_veranderen('rij6_7')"> </td>
 		</tr>
 		
 	</table>
