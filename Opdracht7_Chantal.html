@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <style>
+    </style>
+    <script>
+		var seizoenen_lijst = ["lente.jpg", "zomer.jpg", "herfst.jpg", "winter.jpg"]
+		//var counter = 1
+		//var jaarcounter = 0
+		
+		function seizoenen(foto){
+			console.log(seizoenen_lijst)
+			if(!seizoenen_lijst.includes(foto)){
+				seizoenen_lijst.push(foto);
+				}
+			console.log(seizoenen_lijst)
+			//document.getElementById('seizoen').src=seizoenen_lijst[counter]
+			//counter += 1
+			//if (counter == 4){
+			//	counter = 0;
+			//	jaarcounter += 1;
+			//	}
+			//if (jaarcounter == 3 && counter == 0){
+			//	document.getElementById("boodschap").innerHTML += ("Er zijn 3 jaren voorbij")
+			//	}
+			}
+    </script>
+  </head> 
+  <body>
+	<img id="AfbeeldingA" src="Chipie.jpg" style="width:300px">
+	<img id="AfbeeldingB" src="Sacha.jpg" style="width:300px">
+	<br>
+	<button onclick="seizoenen('Chipie.jpg')">Knop A (genereer random foto links)</button> <!-- Om plaatje 1 te veranderen-->
+	<button onclick="seizoenen('Sacha.jpg')">Knop B (genereer random foto rechts)</button> <!-- Om plaatje 2 te veranderen-->
+	<button onclick="seizoenen()">Knop C (Hetzelfde?)</button> <!-- Om te kijken of de twee plaatjes hetzelfde zijn-->
+  </body>
+</html>
