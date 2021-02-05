@@ -6,13 +6,26 @@
 	}
 	
 	td:hover{
-		background-color: yellow;
+		background-color: blue;
 		}
 		
     </style>
     <script>
 		var blokjeslijst = [6, 6, 6, 6, 6, 6, 6]
 		var speler = 1
+		var speler1 = "Speler 1"
+		var speler2 = "Speler 2"
+		
+		function spelersnaam(invoerspeler){
+			var spelertje = document.getElementById(invoerspeler).value;
+			console.log(spelertje)
+			if (invoerspeler == "invoer_speler1"){
+				speler1 = spelertje
+				}
+			if (invoerspeler == "invoer_speler2"){
+				speler2 = spelertje
+				}
+			}
 		
 		function kleur_veranderen(identifier){
 			console.log("hoi")
@@ -25,10 +38,12 @@
 			if (speler == 1){
 				blokje.style.backgroundColor = 'red';
 				speler = 2
+				document.getElementById("boodschap").innerHTML = (speler2 + " is aan de beurt")
 				}
 			else{
 				blokje.style.backgroundColor = 'yellow';
 				speler = 1
+				document.getElementById("boodschap").innerHTML = (speler1 + " is aan de beurt")
 				}
 			blokjeslijst[kolom - 1] -= 1
 			console.log(blokjeslijst)
@@ -93,9 +108,14 @@
 			<td id=rij6_7 onclick="kleur_veranderen('rij6_7')"> </td>
 		</tr>
 		Naam speler 1
-		<input type=text id=invoer>
+		<input type=text id=invoer_speler1>
+		<input type=button id=speler1 value="Bevestig naam speler 1" onclick=spelersnaam("invoer_speler1")>
 		Naam speler 2
-		<input type=text id=invoer>
+		<input type=text id=invoer_speler2>
+		<input type=button id=speler2 value="Bevestig naam speler 2" onclick=spelersnaam("invoer_speler2")>
+		<br>
+		<br>
+		<div id=boodschap>
 		
 	</table>
   </body>
