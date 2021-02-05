@@ -11,10 +11,13 @@
 		
     </style>
     <script>
+	
 		var blokjeslijst = [6, 6, 6, 6, 6, 6, 6]
 		var speler = 1
 		var speler1 = "Speler 1"
 		var speler2 = "Speler 2"
+		var lijst_speler1 = []
+		var lijst_speler2 = []
 		
 		function spelersnaam(invoerspeler){
 			var spelertje = document.getElementById(invoerspeler).value;
@@ -38,14 +41,23 @@
 				blokje.style.backgroundColor = 'red';
 				speler = 2
 				document.getElementById("boodschap").innerHTML = (speler2 + " is aan de beurt")
+				lijst_speler1.push(veranderblokje)
+				console.log(lijst_speler1)
 				}
 			else{
 				blokje.style.backgroundColor = 'yellow';
 				speler = 1
 				document.getElementById("boodschap").innerHTML = (speler1 + " is aan de beurt")
+				lijst_speler2.push(veranderblokje)
+				console.log(lijst_speler2)
 				}
 			blokjeslijst[kolom - 1] -= 1
 			}
+			
+		//function gewonnen(spelerslijst){
+				
+			//}
+			
     </script>
   </head> 
   <body>
@@ -113,7 +125,7 @@
 		<input type=button id=speler2 value="Bevestig naam speler 2" onclick=spelersnaam("invoer_speler2")>
 		<br>
 		<br>
-		<div id=boodschap>
+		<div id=boodschap value="hello">
 		
 	</table>
   </body>
