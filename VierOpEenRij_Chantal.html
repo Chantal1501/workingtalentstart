@@ -18,7 +18,6 @@
 		
 		function spelersnaam(invoerspeler){
 			var spelertje = document.getElementById(invoerspeler).value;
-			console.log(spelertje)
 			if (invoerspeler == "invoer_speler1"){
 				speler1 = spelertje
 				}
@@ -28,12 +27,12 @@
 			}
 		
 		function kleur_veranderen(identifier){
-			console.log("hoi")
-			console.log(identifier)
 			var kolom = identifier.split("_")[1];
-			console.log(kolom)
 			veranderblokje = "rij" + blokjeslijst[kolom - 1] + "_" + kolom
-			console.log(veranderblokje)
+			if (blokjeslijst[kolom -1] < 1){
+				alert("Pas op! Deze kolom zat al vol. Kies een andere kolom");
+				return;
+				}
 			var blokje = document.getElementById(veranderblokje);
 			if (speler == 1){
 				blokje.style.backgroundColor = 'red';
@@ -46,7 +45,6 @@
 				document.getElementById("boodschap").innerHTML = (speler1 + " is aan de beurt")
 				}
 			blokjeslijst[kolom - 1] -= 1
-			console.log(blokjeslijst)
 			}
     </script>
   </head> 
