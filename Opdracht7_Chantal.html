@@ -4,33 +4,40 @@
     </style>
     <script>
 		var seizoenen_lijst = ["lente.jpg", "zomer.jpg", "herfst.jpg", "winter.jpg"]
-		//var counter = 1
-		//var jaarcounter = 0
+		var foto1 = "Chipie.jpg"
+		var foto2 = "Sacha.jpg"
 		
-		function seizoenen(foto){
-			console.log(seizoenen_lijst)
+		function seizoenen(foto, afbeeldingnummer){
 			if(!seizoenen_lijst.includes(foto)){
 				seizoenen_lijst.push(foto);
 				}
-			console.log(seizoenen_lijst)
-			//document.getElementById('seizoen').src=seizoenen_lijst[counter]
-			//counter += 1
-			//if (counter == 4){
-			//	counter = 0;
-			//	jaarcounter += 1;
-			//	}
-			//if (jaarcounter == 3 && counter == 0){
-			//	document.getElementById("boodschap").innerHTML += ("Er zijn 3 jaren voorbij")
-			//	}
+			var random_getal = Math.floor(Math.random() * seizoenen_lijst.length);
+			document.getElementById(afbeeldingnummer).src=seizoenen_lijst[random_getal]
+			if (afbeeldingnummer == "AfbeeldingA"){
+				foto1 = seizoenen_lijst[random_getal];
+				}
+			if (afbeeldingnummer == "AfbeeldingB"){
+				foto2 = seizoenen_lijst[random_getal];
+				}
 			}
+		
+		function hetzelfde(){
+			if(foto1 == foto2){
+				console.log("HETZELFDE");
+				}
+			else{
+				console.log("NIET HETZELFDE");
+				}
+			}
+		
     </script>
   </head> 
   <body>
-	<img id="AfbeeldingA" src="Chipie.jpg" style="width:300px">
-	<img id="AfbeeldingB" src="Sacha.jpg" style="width:300px">
+	<img id="AfbeeldingA" src="Chipie.jpg" width="300" height="175">
+	<img id="AfbeeldingB" src="Sacha.jpg" width="300" height="175">
 	<br>
-	<button onclick="seizoenen('Chipie.jpg')">Knop A (genereer random foto links)</button> <!-- Om plaatje 1 te veranderen-->
-	<button onclick="seizoenen('Sacha.jpg')">Knop B (genereer random foto rechts)</button> <!-- Om plaatje 2 te veranderen-->
-	<button onclick="seizoenen()">Knop C (Hetzelfde?)</button> <!-- Om te kijken of de twee plaatjes hetzelfde zijn-->
+	<button onclick="seizoenen('Chipie.jpg', 'AfbeeldingA')">Knop A (genereer random foto links)</button> <!-- Om plaatje 1 te veranderen-->
+	<button onclick="seizoenen('Sacha.jpg', 'AfbeeldingB')">Knop B (genereer random foto rechts)</button> <!-- Om plaatje 2 te veranderen-->
+	<button onclick="hetzelfde()">Knop C (Hetzelfde?)</button> <!-- Om te kijken of de twee plaatjes hetzelfde zijn-->
   </body>
 </html>
