@@ -12,6 +12,7 @@
     </style>
     <script>
 		var blokjeslijst = [6, 6, 6, 6, 6, 6, 6]
+		var speler = 1
 		
 		function kleur_veranderen(identifier){
 			console.log("hoi")
@@ -21,7 +22,14 @@
 			veranderblokje = "rij" + blokjeslijst[kolom - 1] + "_" + kolom
 			console.log(veranderblokje)
 			var blokje = document.getElementById(veranderblokje);
-			blokje.style.backgroundColor = 'green';
+			if (speler == 1){
+				blokje.style.backgroundColor = 'red';
+				speler = 2
+				}
+			else{
+				blokje.style.backgroundColor = 'yellow';
+				speler = 1
+				}
 			blokjeslijst[kolom - 1] -= 1
 			console.log(blokjeslijst)
 			}
@@ -84,6 +92,10 @@
 			<td id=rij6_6 onclick="kleur_veranderen('rij6_6')"> </td>
 			<td id=rij6_7 onclick="kleur_veranderen('rij6_7')"> </td>
 		</tr>
+		Naam speler 1
+		<input type=text id=invoer>
+		Naam speler 2
+		<input type=text id=invoer>
 		
 	</table>
   </body>
