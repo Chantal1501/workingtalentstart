@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <style>
+    </style>
+    <script>
+		var seizoenen_lijst = ["lente.jpg", "zomer.jpg", "herfst.jpg", "winter.jpg"]
+		var counter = 1
+		
+		function seizoenen(){
+			document.getElementById('seizoen').src=seizoenen_lijst[counter]
+			counter += 1
+			if (counter == 4){
+				counter = 0;
+				}
+			if (seizoenen_lijst[counter] == "zomer.jpg"){
+				document.getElementById('lente').src="lammetjes.jpg";
+				}
+			else{
+				document.getElementById('lente').src="Chipie.jpg";
+				}
+			}
+    </script>
+  </head> 
+  <body>
+	<img id="seizoen" src="lente.jpg" width="300" height="175" onclick="seizoenen()">
+	<img id="lente" src="lammetjes.jpg" width="300" height="175">
+	<div id = boodschap>
+  </body>
+</html>
