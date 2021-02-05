@@ -10,11 +10,17 @@
 		}
 		
     </style>
-    <script>	
+    <script>
+		var blokjeslijst = [6, 6, 6, 6, 6, 6, 6]
+		
 		function kleur_veranderen(identifier){
 			console.log("hoi")
 			console.log(identifier)
-			var blokje = document.getElementById(identifier);
+			var kolom = identifier.split("_")[1];
+			console.log(kolom)
+			veranderblokje = "rij" + blokjeslijst[kolom - 1] + "_" + kolom
+			console.log(veranderblokje)
+			var blokje = document.getElementById(veranderblokje);
 			blokje.style.backgroundColor = 'green';
 			}
     </script>
