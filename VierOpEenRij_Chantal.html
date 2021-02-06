@@ -42,21 +42,32 @@
 				speler = 2
 				document.getElementById("boodschap").innerHTML = (speler2 + " is aan de beurt")
 				lijst_speler1.push(veranderblokje)
-				console.log(lijst_speler1)
+				gewonnen(lijst_speler1)
 				}
 			else{
 				blokje.style.backgroundColor = 'yellow';
 				speler = 1
 				document.getElementById("boodschap").innerHTML = (speler1 + " is aan de beurt")
 				lijst_speler2.push(veranderblokje)
-				console.log(lijst_speler2)
+				gewonnen(lijst_speler2)
 				}
 			blokjeslijst[kolom - 1] -= 1
 			}
 			
-		//function gewonnen(spelerslijst){
+		function gewonnen(spelerslijst){
+			console.log(spelerslijst)
+			rij_lijst = [0,0,0,0,0,0]
+			kolom_lijst = [0,0,0,0,0,0,0]
+			for(x=0; x<spelerslijst.length;x++){
+				var kolom = (spelerslijst[x].split("_")[1])
+				kolom_lijst[kolom-1] += 1;
+				var rij = (spelerslijst[x].split("_")[0].substring(3,4))
+				rij_lijst[rij-1] += 1;
+				}
+			console.log(rij_lijst)
+			console.log(kolom_lijst)
 				
-			//}
+			}
 			
     </script>
   </head> 
