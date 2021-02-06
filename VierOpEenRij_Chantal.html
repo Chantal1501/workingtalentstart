@@ -42,19 +42,19 @@
 				speler = 2
 				document.getElementById("boodschap").innerHTML = (speler2 + " is aan de beurt")
 				lijst_speler1.push(veranderblokje)
-				gewonnen(lijst_speler1)
+				gewonnen(lijst_speler1, speler1)
 				}
 			else{
 				blokje.style.backgroundColor = 'yellow';
 				speler = 1
 				document.getElementById("boodschap").innerHTML = (speler1 + " is aan de beurt")
 				lijst_speler2.push(veranderblokje)
-				gewonnen(lijst_speler2)
+				gewonnen(lijst_speler2, speler2)
 				}
 			blokjeslijst[kolom - 1] -= 1
 			}
 			
-		function gewonnen(spelerslijst){
+		function gewonnen(spelerslijst, speler){
 			console.log(spelerslijst)
 			rij_lijst = [0,0,0,0,0,0]
 			kolom_lijst = [0,0,0,0,0,0,0]
@@ -66,6 +66,14 @@
 				}
 			console.log(rij_lijst)
 			console.log(kolom_lijst)
+			if (rij_lijst.includes(4)){
+				rij_4 = rij_lijst.indexOf(4) + 1
+				alert("Gefeliciteerd " + speler + "! Je hebt 4 blokjes in dezelfde rij!")
+				}
+			if (kolom_lijst.includes(4)){
+				kolom_4 = kolom_lijst.indexOf(4) + 1
+				alert("Gefeliciteerd " + speler + "! Je hebt 4 blokjes in dezelfde kolom!")
+				}
 				
 			}
 			
