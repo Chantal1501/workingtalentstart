@@ -1,7 +1,7 @@
 import java.util.Arrays;
 
 public class Array_sorteren {
-	public static void main(String [] args) {
+	public static void main(String args[]) {
 		int [] randomLijst = new int[10];
 		for (int x = 0; x < 10; x ++) {
 			randomLijst[x] = (int)(Math.random() * 100 + 1);
