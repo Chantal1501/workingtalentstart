@@ -8,13 +8,24 @@ public class Lingo {
 		while (woordGeraden == false) {
 			Scanner invoer = new Scanner(System.in);
 			System.out.println("Voer een woord in");
-			String lingoWoord = invoer.nextLine();
+			String lingoWoord = invoer.nextLine().toLowerCase();
+			while(lingoWoord.length() != woord.length()) {
+				System.out.println("Helaas dit woord is niet even lang als het lingo woord.");
+				Scanner invoer2 = new Scanner(System.in);
+				System.out.println("Voer een nieuw woord in");
+				lingoWoord = invoer2.nextLine().toLowerCase();
+			}
 			System.out.println(lingoWoord);
+			uitslagCode(woord, lingoWoord);
 			if (lingoWoord.equals(woord)) {
 				System.out.println("Hoera je hebt het woord geraden!");
 				woordGeraden = true;
 			}
 		}
+	}
+	
+	public static void uitslagCode(String woord, String lingoWoord) {
+		
 	}
 	
 	public static void streepjesTonen(String woord) {
