@@ -15,7 +15,6 @@ public class Lingo {
 				System.out.println("Voer een nieuw woord in");
 				lingoWoord = invoer2.nextLine().toLowerCase();
 			}
-			System.out.println(lingoWoord);
 			uitslagCode(woord, lingoWoord);
 			if (lingoWoord.equals(woord)) {
 				System.out.println("Hoera je hebt het woord geraden!");
@@ -25,7 +24,20 @@ public class Lingo {
 	}
 	
 	public static void uitslagCode(String woord, String lingoWoord) {
-		
+		for (int x = 0; x < woord.length(); x ++) {
+			if (woord.contains(Character.toString(lingoWoord.charAt(x)))) {
+				if (woord.charAt(x) == lingoWoord.charAt(x)) {
+					System.out.print("2");
+				}
+				else {
+					System.out.print("1");
+				}
+			}
+			else {
+				System.out.print("0");
+			}
+		}
+		System.out.println("\n");
 	}
 	
 	public static void streepjesTonen(String woord) {
