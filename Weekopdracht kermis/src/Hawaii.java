@@ -1,8 +1,9 @@
 class Hawaii extends Attractie {
-	double kosten = 2.90;
-	double omzet = 0;
 	
-	void inActie() {
-		System.out.println("De Hawaii attractie draait!");
+	Hawaii(){
+		naam = "hawaii";
+		kosten = 2.90;
+		omzet = 0;
+		aantalKaartjes = 0;
 	}
 }

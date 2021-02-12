@@ -16,14 +16,15 @@ public class Kermis_Main {
         	String attractieKeuze = scanner.nextLine();
         	System.out.println(attractieKeuze);
         	switch (attractieKeuze) {
-        	case "1": botsauto1.inActie(); break;
-        	case "2": spin1.inActie(); break;
-        	case "3": spiegelpaleis1.inActie(); break;
-        	case "4": spookhuis1.inActie(); break;
-        	case "5": hawaii1.inActie(); break;
-        	case "6": ladderklimmen1.inActie(); break;
+        	case "1": Attractie.inActie(botsauto1); break;
+        	case "2": Attractie.inActie(spin1); break;
+        	case "3": Attractie.inActie(spiegelpaleis1); break;
+        	case "4": Attractie.inActie(spookhuis1); break;
+        	case "5": Attractie.inActie(hawaii1); break;
+        	case "6": Attractie.inActie(ladderklimmen1); break;
         	default: System.out.println("Helaas dit is geen geldige input. De kermis stopt."); doorgaan = false; break;
         	}
         }
+		System.out.println(botsauto1.omzet);
 	}
 }
