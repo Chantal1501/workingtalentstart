@@ -1,0 +1,4 @@
+interface Vliegend {
+	void vliegen();
+
+}
