@@ -2,7 +2,7 @@ class Spookhuis extends Attractie {
 
 	Spookhuis(){
 		naam = "spookhuis";
-		kosten = 2.50;
+		kosten = 3.20;
 		omzet = 0;
 		aantalKaartjes = 0;
 	}

@@ -5,9 +5,10 @@ class Attractie {
 	int aantalKaartjes;
 	
 	
-	static void inActie(Attractie attracties) {
-		System.out.println("De attractie " + attracties.naam + " draait!");
-		//attracties.omzet += attracties.kosten;
+	static void inActie(Attractie attractie) {
+		System.out.println("De attractie " + attractie.naam + " draait!\n");
+		attractie.omzet += attractie.kosten;
+		attractie.aantalKaartjes += 1;
 	}
 
 }
