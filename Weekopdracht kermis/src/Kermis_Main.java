@@ -19,12 +19,42 @@ public class Kermis_Main {
         	String attractieKeuze = scanner.nextLine();
         	System.out.println(attractieKeuze);
         	switch (attractieKeuze) {
-        	case "1": Attractie.inActie(botsauto1); kassa += botsauto1.kosten; aantalKaartjes += 1; break;
-        	case "2": Attractie.inActie(spin1); kassa += spin1.kosten; aantalKaartjes += 1; break;
-        	case "3": Attractie.inActie(spiegelpaleis1); kassa += spiegelpaleis1.kosten; aantalKaartjes += 1; break;
-        	case "4": Attractie.inActie(spookhuis1); kassa += spookhuis1.kosten; aantalKaartjes += 1; break;
-        	case "5": Attractie.inActie(hawaii1); kassa += hawaii1.kosten; aantalKaartjes += 1; break;
-        	case "6": Attractie.inActie(ladderklimmen1); kassa += ladderklimmen1.kosten; aantalKaartjes += 1; break;
+        	case "1": 
+        		Attractie.inActie(botsauto1); 
+        		kassa += botsauto1.kosten; 
+        		aantalKaartjes += 1; 
+        		break;
+        	case "2": 
+        		Attractie.inActie(spin1); 
+        		kassa += spin1.kosten; 
+        		aantalKaartjes += 1; 
+        		if ((spin1.aantalKaartjes % 5) == 0) {
+        			opstellingsKeuring(spin1);
+        		}
+        		break;
+        	case "3": 
+        		Attractie.inActie(spiegelpaleis1); 
+        		kassa += spiegelpaleis1.kosten; 
+        		aantalKaartjes += 1; 
+        		break;
+        	case "4": 
+        		Attractie.inActie(spookhuis1); 
+        		kassa += spookhuis1.kosten; 
+        		aantalKaartjes += 1; 
+        		break;
+        	case "5": 
+        		Attractie.inActie(hawaii1); 
+        		kassa += hawaii1.kosten; 
+        		aantalKaartjes += 1;
+        		if ((hawaii1.aantalKaartjes % 10) == 0) {
+        			opstellingsKeuring(hawaii1);
+        		}
+        		break;
+        	case "6": 
+        		Attractie.inActie(ladderklimmen1); 
+        		kassa += ladderklimmen1.kosten; 
+        		aantalKaartjes += 1; 
+        		break;
         	case "o": System.out.println("De omzet tot nu toe is: €" + kassa + "\n"); break;
         	case "k": System.out.println("Het aantal verkochte kaartjes tot nu toe is: " + aantalKaartjes + "\n"); break;
         	default: System.out.println("Helaas dit is geen geldige input. De kermis stopt."); doorgaan = false; break;
@@ -32,5 +62,9 @@ public class Kermis_Main {
         }
 		System.out.println("Totale omzet: " + kassa + "\nBotsauto omzet: " + botsauto1.omzet);
 		System.out.println("Aantal kaartjes: " + botsauto1.aantalKaartjes);
+	}
+	
+	static void opstellingsKeuring(Attractie attractie) {
+		System.out.println("De onderhoudsbeurt aan de " + attractie.naam + " vind plaats.\n");
 	}
 }
