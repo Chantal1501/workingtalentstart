@@ -81,8 +81,13 @@ public class Kermis_Main {
         		break;
         	}
         }
-		System.out.println("Totale omzet: " + kassa + "\nBotsauto omzet: " + botsauto1.omzet);
-		System.out.println("Aantal kaartjes: " + botsauto1.aantalKaartjes);
+		System.out.println("Totale omzet= €" + kassa + ", aantal kaartjes= " + aantalKaartjes); 
+		System.out.println("Botsauto omzet= €" + botsauto1.omzet + ", aantal kaartjes= " + botsauto1.aantalKaartjes);
+		System.out.println("Spin omzet= €" + spin1.omzet + ", aantal kaartjes= " + spin1.aantalKaartjes);
+		System.out.println("Spiegelpaleis omzet= €" + spiegelpaleis1.omzet + ", aantal kaartjes= " + spiegelpaleis1.aantalKaartjes);
+		System.out.println("Spookhuis omzet= €" + spookhuis1.omzet + ", aantal kaartjes= " + spookhuis1.aantalKaartjes);
+		System.out.println("Hawaii omzet= €" + hawaii1.omzet + ", aantal kaartjes= " + hawaii1.aantalKaartjes);
+		System.out.println("Ladderklimmen omzet= €" + ladderklimmen1.omzet + ", aantal kaartjes= " + ladderklimmen1.aantalKaartjes);
 	}
 	
 	static void opstellingsKeuring(Attractie attractie) {
