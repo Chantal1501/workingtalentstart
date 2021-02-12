@@ -1,9 +1,13 @@
 import java.util.Scanner; 
 
+//Het is mij wel gelukt om de onderhoudsbeurt toe te voegen, maar alleen niet met een abstracte klasse RisicoRijkeAttracties.
+//Ook is het mij wel gelukt om de kansspelbelasting te betalen, maar niet om dit met behulp van de interface GokAttractie en de klasse Belastinginspecteur te doen.
+
 public class Kermis_Main {
 	public static void main(String args[]) {
 		double kassa = 0;
 		int aantalKaartjes = 0;
+		double kansspelbelasting = 0;
 		Botsauto botsauto1 = new Botsauto();
 		Spin spin1 = new Spin();
 		Spiegelpaleis spiegelpaleis1 = new Spiegelpaleis(); 
@@ -15,6 +19,7 @@ public class Kermis_Main {
         	System.out.println("Welke attractie wil je doen?");
         	System.out.println("1: Botsauto\n2: Spin\n3: Spiegelpaleis\n4: Spookhuis\n5: Hawaii\n6: Ladderklimmen");
         	System.out.println("Voor het bekijken van de totale omzet kies 'o'. Voor het bekijken van het aantal verkochte kaartjes kies 'k'.");
+        	System.out.println("Voor het bezoek van de belasting inspecteur kies 'b'. ");
         	Scanner scanner = new Scanner(System.in);
         	String attractieKeuze = scanner.nextLine();
         	System.out.println(attractieKeuze);
@@ -54,10 +59,26 @@ public class Kermis_Main {
         		Attractie.inActie(ladderklimmen1); 
         		kassa += ladderklimmen1.kosten; 
         		aantalKaartjes += 1; 
+        		kansspelbelasting += (0.30 * ladderklimmen1.kosten);
         		break;
-        	case "o": System.out.println("De omzet tot nu toe is: €" + kassa + "\n"); break;
-        	case "k": System.out.println("Het aantal verkochte kaartjes tot nu toe is: " + aantalKaartjes + "\n"); break;
-        	default: System.out.println("Helaas dit is geen geldige input. De kermis stopt."); doorgaan = false; break;
+        	case "o": 
+        		System.out.println("De omzet tot nu toe is: €" + kassa + "\n"); 
+        		break;
+        	case "k": 
+        		System.out.println("Het aantal verkochte kaartjes tot nu toe is: " + aantalKaartjes + "\n"); 
+        		break;
+        	case "b": 
+        		System.out.println("De gereserveerde kansspel belasting is: €" + kansspelbelasting); 
+        		System.out.println("De omzet was: €" + kassa);
+        		kassa -= kansspelbelasting;
+        		ladderklimmen1.omzet -= kansspelbelasting;
+        		kansspelbelasting = 0;
+        		System.out.println("De omzet wordt nu: €" + kassa + "\n");
+        		break;
+        	default: 
+        		System.out.println("Helaas dit is geen geldige input. De kermis stopt."); 
+        		doorgaan = false; 
+        		break;
         	}
         }
 		System.out.println("Totale omzet: " + kassa + "\nBotsauto omzet: " + botsauto1.omzet);
